@@ -15,7 +15,7 @@
 
     <script type="text/javascript">
         (function() {
-            emailjs.init({publicKey: "Rrkxmrd92l5y4bdb9"});
+            emailjs.init({publicKey: "bZ4d5EoVd-motTOjN"});
         })();
 
         // Função de validação
@@ -30,9 +30,9 @@
                 return false;
             }
 
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailPattern.test(email)) {
-                alert("Por favor, insira um e-mail válido.");
+            const phonePattern = /^[0-9]{10,}$/;
+            if (phone && !phonePattern.test(phone)) {
+                alert("Por favor, insira um telefone válido.");
                 return false;
             }
 
@@ -70,7 +70,7 @@
                 message: message,
             };
 
-            emailjs.send('service_93tjqdh', 'template_ka7jhv7', templateParams)
+            emailjs.send('service_bm3j9n7', 'template_a0h31u5', templateParams)
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
                     document.getElementById('success-message').style.display = 'block';
@@ -96,15 +96,15 @@
 
     <nav id="menu">
         <ul class="links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="scrolly">Home</a></li>
             <li><a href="#about" class="scrolly">Sobre</a></li>
-            <li><a href="elements.html">Elements</a></li>
+            <li><a href="#main" class="scrolly">Contato</a></li>
         </ul>
     </nav>
 
     <section id="banner">
         <video autoplay muted loop id="background-video">
-            <source src="../../images/banner_video.mp4" type="video/mp4">
+            <source src="../../images/banner_video1.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
         
@@ -118,14 +118,14 @@
             <a href="#main" class="button big scrolly">Entrar em contato.</a>
         </div>
     </section>
-    <div class="container my-5">
+    <div class="container my-5" id="about">
         <div class="row justify-content-center">
             <!-- Coluna 1 -->
             <div class="col-md-4 text-center mb-4">
                 <div class="rounded-circle shadow overflow-hidden mx-auto" style="width: 320px; height: 320px;">
                     <img src="images/tia_img.jpeg" alt="Imagem 1" class="img-fluid">
                 </div>
-                <p class="mt-3">Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet.</p>
+                <p class="mt-3">Sou graduada em Pedagogia e Psicologia, com especialização em Neuropsicologia e Psicomotricidade.</p>
             </div>
 
             <!-- Coluna 2 -->
@@ -133,7 +133,7 @@
                 <div class="rounded-circle shadow overflow-hidden mx-auto" style="width: 320px; height: 320px;">
                     <img src="images/tia_img2.jpeg" alt="Imagem 2" class="img-fluid">
                 </div>
-                <p class="mt-3">Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet.</p>
+                <p class="mt-3">Utilizo metodologias consagradas como a Terapia Cognitivo-Comportamental (TCC Clássica) e a Terapia de Aceitação e Compromisso (ACT).</p>
             </div>
 
             <!-- Coluna 3 -->
@@ -141,20 +141,20 @@
                 <div class="rounded-circle shadow overflow-hidden mx-auto" style="width: 320px; height: 320px;">
                     <img src="images/tia_img4.jpg" alt="Imagem 3" class="img-fluid">
                 </div>
-                <p class="mt-3">Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet.</p>
+                <p class="mt-3">Meu compromisso é oferecer um atendimento seguro e acolhedor, onde você possa explorar sua história, pensamentos e emoções.</p>
             </div>
 
         </div>
     </div>
 
-    <section class="bg-primary py-5">
+    <section class="azul-escuro py-5">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Texto à esquerda -->
                 <div class="col-md-6">
-                    <h3 class="text-white mb-3">Suspendisse quis massa vel justo</h3>
-                    <p class="text-white">Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.</p>
-                    <p class="text-white">Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.</p>
+                    <h3 class="text-white mb-3">Bem-vindo ao Nosso Espaço de Psicologia</h3>
+                    <p class="text-white">Aqui, cada detalhe foi pensado para oferecer conforto, acolhimento e tranquilidade. Nosso consultório conta com um ambiente climatizado, cuidadosamente projetado para garantir uma experiência acolhedora e relaxante.</p>
+                    <p class="text-white">O destaque do espaço é o nosso elegante sofá rosa acolchoado, que transmite suavidade e delicadeza, convidando você a se sentir em casa. Cada canto do consultório foi planejado para promover uma atmosfera de calma e segurança, essencial para momentos de reflexão e cuidado emocional.</p>
                 </div>
     
                 <!-- Imagem à direita -->
@@ -206,13 +206,12 @@
         
     </div>
 
-    <footer id="footer">
+    <footer id="footer" class="azul-escuro">
         <div class="copyright">
             <ul class="icons">
-                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
+                <li><a href="https://api.whatsapp.com/message/47YQS25IZJUYL1?autoload=1&app_absent=0" class="icon fa-whatsapp"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.instagram.com/clinicaasantiago/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/clinicaasantiago/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
             </ul>
         </div>
     </footer>   

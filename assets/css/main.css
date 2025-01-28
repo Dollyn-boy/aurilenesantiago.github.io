@@ -3432,7 +3432,7 @@
 
 		#header > .logo a {
 			text-decoration: none; /* Remove o underline */
-			color: #4AA3DF; /* Define a cor inicial como azul */
+			color: white; /* Define a cor inicial como azul */
 			transition: color 0.3s ease; /* Adiciona uma transição suave na mudança de cor */
 			font-size: 1.5em; /* Aumenta o tamanho da fonte */
 			font-weight: bold; /* Deixa o texto mais destacado */
@@ -4033,6 +4033,7 @@ form#contact-form {
 
 			#footer .copyright .icons a {
 				border-radius: 100%;
+				background-color: white;
 				box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 4px #fff, 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
 				display: block;
 				font-size: 1em;
@@ -4066,3 +4067,17 @@ form#contact-form {
 			}
 
 		}
+
+
+	.azul-escuro {
+		background-color: #10183F;
+	}
+
+	.azul-escuro-texto{
+		color: #10183F;
+	}
+
+	#contato_btn {
+		background-color: white;
+		color: #10183F;
+	}
